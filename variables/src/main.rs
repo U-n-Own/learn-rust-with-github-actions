@@ -15,6 +15,12 @@ fn main() {
 
     shadowing_1();
 
+    println!("Printing the first 10 fibonacci number sequence");
+
+
+    for number_in_sequence in 0..10 {
+    println!("Number {number_in_sequence}: {}", fibo(number_in_sequence))
+    }
 
     //Tuples
 
@@ -34,4 +40,17 @@ fn shadowing_1() {
     }
 
     println!("The value of x is: {x}");
+}
+
+fn fibo(n : i32) -> i32 {
+
+    if n == 0 {
+        return 0;
+    }
+
+    if n == 1 {
+        return 1;
+    }
+
+    fibo(n-1) + fibo(n-2)
 }
